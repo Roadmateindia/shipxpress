@@ -1,0 +1,271 @@
+.Home{
+  background-color: aliceblue;
+}
+.shipmentbox{
+  border: 1px solid black;
+  width: 50px;
+}
+.topbar{
+  /* position: fixed; */
+  background-color: aliceblue;
+  position: fixed;
+  width: 100%;
+
+  
+}
+/* .shipment{
+  margin-left: 300px;
+} */
+/* .rechargebox{
+  float: right;
+  margin-left: 30px;
+} */
+
+
+.dashboard{
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  margin-left: 315px;
+  margin-top: 20px;
+}
+.datee input{
+     margin-top: 30px;
+    margin-left: 16px;
+}
+.card1{
+  height: 200px;
+  background-color: aqua;
+ 
+}
+.card2{
+  height: 200px;
+  background-color: aqua;
+ 
+ 
+}
+.card3{
+  height: 200px;
+  background-color: aqua;
+  margin-left: 20px;
+
+
+ 
+}
+.card4{
+  height: 200px;
+  background-color: aqua;
+ 
+ 
+}
+.news-container{
+  height: 50px;
+  background-color: white;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+.news-container span{
+      color: brown;
+    padding-left: 125px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.news-container marquee {
+  font-size: small;
+  color: rgb(46, 59, 46);
+}
+.courier{
+  margin-top: 20px;
+  
+
+  
+}
+.courierload{
+ height: 320px;
+ background-color: white;
+ padding-top: 20px;
+ text-align: center;
+ border-radius: 15px;
+ width: 97%;
+}
+
+.courierStatus{
+  height: 170px;
+  background-color: white;
+  margin-left: 15px;
+  width: 97%;
+  border-radius: 15px;
+}
+.status{
+  height: 50px;
+  background-color: #12263f;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.status p{
+    padding-top: 10px;
+    padding-left: 12px;
+}
+.groups{
+  font-size: x-small;
+  padding-top: 10px;
+  color: blue;
+}
+.destination{
+  margin-top: 30px;
+  text-align: center;
+  
+}
+.top-destination{
+  height: 320px;
+  background-color: white;
+  border-radius: 15px;
+  width: 97%;
+}
+.payment-load{
+  height: 320px;
+  width: 97%;
+  background-color: white;
+  border-radius: 15px;
+  
+}
+.product span {
+    color: blue;
+    font-size: 9px;
+    font-weight: bolder;
+    padding-left: 72px;
+  
+}
+.productwise-status{
+  height: 150px;
+  background-color: white;
+  border-radius: 15px;
+   margin-top: 30px;
+   width: 98%;
+   margin-left: 5px;
+
+}
+.productwise-status p{
+    padding-left: 31px;
+    padding-top: 6px;
+    font-size: small;
+    font-weight: 600;
+   
+  
+}
+
+/* sidebar- css*/
+.roadmate-logo{
+   
+    height: 67px;
+    width: 200px;
+    background-color: white;
+    
+
+}
+.dashboard-sidebar{
+  margin-left: 30px;
+  margin-top: -23px;
+}
+.sidebar-exception{
+  margin-left: 28px;
+    margin-top: -24px;
+}
+.roadmate-logo img{
+    /* fill: white; */
+        /* fill: white; */
+    width: 60px;
+    height: 67px;}
+
+.menu-items{
+  color: white;
+}
+.sidebar-background{
+  height: 680px;
+  background-color:  #12263f;
+  position: fixed;
+  width: 225px;
+
+}
+.navbar-expand-lg{
+ position: sticky;
+}
+.menu-items li{
+  padding-top: 22px;
+  font-weight: 600;
+  
+
+}
+.arrow{
+  padding-left: 56px;
+  
+}
+.arrow1{
+  padding-left: 32px;
+  
+}
+.arrow2{
+  padding-left: 42px;
+  
+}
+/* this is sub-navbar css */
+.sub-navbar{
+ height: 101px;
+  background-color: #12263f;
+  margin-top: 60px;
+  
+}
+/* 
+this is excepton page css */
+.exception-page{
+  margin-top: -80px;
+}
+ .ndr-card{
+  background-color: white;
+ }
+
+ .shipment-box{
+    width: 307px;
+    height: 40px;
+    border: 1px solid rgb(77, 94, 247);
+    margin-left: 235px;
+    
+    
+ }
+ .shipment-box button{
+
+  color: blue;
+  
+ }
+
+ .search-box{
+  height: 41px;
+    width: 40px;
+    background-color: #12263f;
+    text-align: center;
+    color: white;
+    border-radius: 0px;
+    margin-left: -3px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+ }
+ .rechargebox{
+  border: 1px solid rgb(77, 94, 247);
+  margin-left: 52px;
+  color: white;
+ }
+ .rechargebutton{
+  background-color: #12263f;
+  color: white;
+ }
+ 
+ .whatsapp-redirect i {
+  font-size: 34px;
+  margin-left: 60px;
+}
+.togglebtn{
+  font-size: 34px;
+    padding-left: 23px;
+    color: black;
+}

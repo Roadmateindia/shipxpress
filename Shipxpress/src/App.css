@@ -1,0 +1,250 @@
+.Home{
+  background-color: aliceblue;
+}
+.shipmentbox{
+  border: 1px solid black;
+  width: 50px;
+}
+.topbar{
+  /* position: fixed; */
+  background-color: aliceblue;
+  position: fixed;
+  right: 0;
+  padding-left: 10px;
+  height: 60px;
+  background: white;
+  z-index: 1000;
+  width: 1291px;
+  
+  
+}
+
+.dashboard{
+    font-size: 26px;
+    color: white;
+    font-weight: 500;
+    margin-left: 369px;
+    margin-top: 17px; 
+}
+.datee input{
+     margin-top: 26px;
+    margin-left: 35px;
+    font-size: small;
+    width: 220px;
+    border-radius: 6px;
+    height: 30px;
+    flex: auto;
+}
+
+.news-container{
+  height: 50px;
+  background-color: white;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+.news-container span{
+      color: brown;
+    padding-left: 125px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.news-container marquee {
+  font-size: small;
+  color: rgb(46, 59, 46);
+}
+.courier{
+  margin-top: 20px;
+  
+
+  
+}
+.courierload{
+ height: 320px;
+ background-color: white;
+ padding-top: 20px;
+ text-align: center;
+ border-radius: 15px;
+ width: 97%;
+}
+
+.courierStatus{
+  height: 170px;
+  background-color: white;
+  margin-left: 15px;
+  width: 97%;
+  border-radius: 15px;
+}
+.status{
+  height: 50px;
+  background-color: #12263f;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.status p{
+    padding-top: 10px;
+    padding-left: 12px;
+}
+.groups{
+  font-size: x-small;
+  padding-top: 10px;
+  color: blue;
+}
+.destination{
+  margin-top: 30px;
+  text-align: center;
+  
+}
+.top-destination{
+  height: 320px;
+  background-color: white;
+  border-radius: 15px;
+  width: 97%;
+}
+.payment-load{
+  height: 320px;
+  width: 97%;
+  background-color: white;
+  border-radius: 15px;
+  
+}
+.product span {
+    color: blue;
+    font-size: 9px;
+    font-weight: bolder;
+    padding-left: 72px;
+  
+}
+.productwise-status{
+  height: 150px;
+  background-color: white;
+  border-radius: 15px;
+   margin-top: 30px;
+   width: 98%;
+   margin-left: 5px;
+
+}
+.productwise-status p{
+    padding-left: 31px;
+    padding-top: 6px;
+    font-size: small;
+    font-weight: 600;
+   
+  
+}
+
+/* sidebar- css*/
+.roadmate-logo{
+   
+    height: 60px;
+    width: 200px;
+    background-color: white;
+    
+
+}
+.dashboard-sidebar{
+  margin-left: 30px;
+  margin-top: -23px;
+}
+.sidebar-exception{
+  margin-left: 28px;
+    margin-top: -24px;
+}
+.roadmate-logo img{
+    /* fill: white; */
+        /* fill: white; */
+    width: 60px;
+    height: 60px;
+
+  }
+
+.menu-items{
+  color: white;
+}
+.sidebar-background{
+  height: 680px;
+  background-color:  #12263f;
+  position: fixed;
+  width: 225px;
+
+}
+
+.menu-items li{
+  padding-top: 22px;
+  font-weight: 600;
+  
+
+}
+.arrow{
+  padding-left: 56px;
+  
+}
+.arrow1{
+  padding-left: 32px;
+  
+}
+.arrow2{
+  padding-left: 42px;
+  
+}
+/* this is sub-navbar css */
+.sub-navbar{
+ height: 96px;
+  background-color: #12263f;
+  margin-top: 60px;
+  right: 0;
+  margin-left: 2px;
+  
+}
+/* 
+this is excepton page css */
+.exception-page{
+  margin-top: -80px;
+}
+ .ndr-card{
+  background-color: white;
+ }
+
+ .shipment-box{
+    width: 307px;
+    height: 40px;
+    border: 1px solid rgb(77, 94, 247);
+    margin-left: 235px;
+    
+    
+ }
+ .shipment-box button{
+
+  color: blue;
+  
+ }
+
+ .search-box{
+  height: 40px;
+    width: 40px;
+    background-color: #12263f;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin-left: -9px;
+    
+ }
+ .rechargebox{
+  border: 1px solid rgb(77, 94, 247);
+  margin-left: 52px;
+  color: white;
+ }
+ .rechargebutton{
+  background-color: #12263f;
+  
+ }
+ 
+ .whatsapp-redirect i {
+  font-size: 34px;
+  margin-left: 60px;
+}
+.togglebtn{
+  font-size: 34px;
+    padding-left: 195px;
+    color: black;
+}
