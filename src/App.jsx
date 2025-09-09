@@ -18,8 +18,9 @@ import Report from "./Pages/Report";
 import Settings from "./Pages/Setting";
 import Addons from "./Pages/Addons";
 import Abandoned from "./Pages/Abandoned";
-import Billing from "./Pages/Billing";
 import Service from "./Pages/Service";
+import Billing from "./Pages/Billing-subpages/Billing";
+import CODRemittance from "./Pages/Billing-subpages/CodRemittance";
 
 
 
@@ -58,16 +59,16 @@ const App = () => {
               <Route path="*" element={<Dashboard isOpen={isOpen} />} />
         {/* Routing for the order-sub-pages */}
               <Route path="/Order-subpages/B2B" element={<B2B />} />
-              <Route path="/order-subpages/B2C" element={<B2C />}/>
-              <Route path="/order-subpages/Documents" element={<Documents />}/>
+              <Route path="/Order-subpages/B2C" element={<B2C />}/>
+              <Route path="/Order-subpages/Documents" element={<Documents />}/>
        {/* Routing for Shipment-sub-pages               */}
               <Route path="/Pages/Shipment-sub-pages/ShipmentsB2C" element={<ShipmentsB2C/>} />
               <Route path="/Pages/Shipment-sub-pages/ShipmentsB2B" element={<ShipmentsB2B/>}/>
               <Route path="/Pages/Shipment-sub-pages/ShipmentsDocs" element={<ShipmentsDocs/>}/>
         {/* Routing for Support-sub-pages */}
              
-
-
+        
+      
 
        {/* Routing for the exception page */}
                <Route path="/Pages/Exception" element={<Exception/>}/>
@@ -85,7 +86,8 @@ const App = () => {
               <Route path="/Pages/Abandoned" element={<Abandoned/>}/>
           {/* Routing Page for Settings */}
 
-              <Route path="/Pages/Billing" element={<Billing/>}/>
+              <Route path="/Billing-subpages/Billing" element={<Billing/>}/>
+              <Route path="/Billing-subpages/CodRemittance" element={<CODRemittance/>}/>
           {/* Routing Page for Settings */}
 
               <Route path="/Pages/Service" element={<Service/>}/>

@@ -15,7 +15,8 @@ const Sidebar = ({ isOpen }) => {
       style={{
         width: isOpen ? "260px" : "80px",
         transition: "width 0.3s ease",
-        overflow: "hidden",
+        overflowX: "hidden",
+        overflowY: "auto",
         height: "100vh",
         backgroundColor: "#0d1b2a",
         color: "white",
@@ -48,13 +49,16 @@ const Sidebar = ({ isOpen }) => {
       {/* Menu */}
       <div className="container-fluid mt-1">
         <ul className="menu-items list-unstyled p-0 m-0 space-y-0.5">
-          <li className="flex items-center gap-2 px-3 py-2 hover:bg-[#1e3a5f] rounded">
-            <i className="bi bi-grid-fill text-2xl"></i>
-            {isOpen && (
-              <NavLink to="/Dashboard" className="nav-link text-white">
-                Dashboard
-              </NavLink>
-            )}
+
+          {/* Dashboard */}
+          <li className="px-3 py-2 hover:bg-[#1e3a5f] rounded">
+            <NavLink
+              to="/Dashboard"
+              className="flex items-center gap-2 text-white no-underline"
+            >
+              <i className="bi bi-grid-fill text-2xl"></i>
+              {isOpen && <span>Dashboard</span>}
+            </NavLink>
           </li>
 
           {/* Orders Dropdown */}
@@ -77,7 +81,7 @@ const Sidebar = ({ isOpen }) => {
             </div>
 
             {isOpen && openDropdown === "orders" && (
-              <ul className="pl-8 mt-1 space-y-3  font-medium text-sm">
+              <ul className="pl-8 mt-1 space-y-3 font-medium text-sm">
                 <li>
                   <NavLink to="/order-subpages/b2c" className="block text-white no-underline">
                     B2C
@@ -89,10 +93,7 @@ const Sidebar = ({ isOpen }) => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink
-                    to="/order-subpages/documents"
-                    className="block text-white no-underline"
-                  >
+                  <NavLink to="/order-subpages/documents" className="block text-white no-underline">
                     Document
                   </NavLink>
                 </li>
@@ -102,7 +103,7 @@ const Sidebar = ({ isOpen }) => {
 
           {/* Shipments Dropdown */}
           <li
-            className="flex  flex-col px-3 py-2 hover:bg-[#0a1e38] rounded cursor-pointer"
+            className="flex flex-col px-3 py-2 hover:bg-[#0a1e38] rounded cursor-pointer"
             onClick={() => toggleDropdown("shipments")}
           >
             <div className="flex items-center gap-2">
@@ -120,7 +121,7 @@ const Sidebar = ({ isOpen }) => {
             </div>
 
             {isOpen && openDropdown === "shipments" && (
-              <ul className=" pl-8 mt-1 space-y-3 font-medium text-sm">
+              <ul className="pl-8 mt-1 space-y-3 font-medium text-sm">
                 <li>
                   <NavLink to="/Pages/Shipment-sub-pages/ShipmentsB2C" className="block text-white no-underline">
                     B2C
@@ -140,118 +141,141 @@ const Sidebar = ({ isOpen }) => {
             )}
           </li>
 
-          {/* Other static menus */}
-          <li className="flex items-center gap-2 px-3 py-2 hover:bg-[#1e3a5f] rounded">
-            <i className="bi bi-shield-fill text-2xl"></i>
-            {isOpen && (
-              <NavLink to="/Pages/Exception" className="nav-link text-white">
-                Exception (NDR)
-              </NavLink>
-            )}
-          </li>
-         <li className="flex items-center gap-2 px-3 py-2 hover:bg-[#1e3a5f] rounded">
-            <i className="bi bi-minecart-loaded text-2xl"></i>
-            {isOpen && 
-            <NavLink to="/Pages/Weight" className="nav-link text-white">Weight Reco</NavLink>
-           }
+          {/* Exception */}
+          <li className="px-3 py-2 hover:bg-[#1e3a5f] rounded">
+            <NavLink
+              to="/Pages/Exception"
+              className="flex items-center gap-2 text-white no-underline"
+            >
+              <i className="bi bi-shield-fill text-2xl"></i>
+              {isOpen && <span>Exception (NDR)</span>}
+            </NavLink>
           </li>
 
-          <li className="flex items-center gap-2 px-3 py-2 hover:bg-[#1e3a5f] rounded">
-            <i className="bi bi-receipt text-2xl"></i>
-            {isOpen && 
-            <NavLink to="/Pages/Billing" className="nav-link text-white">Billing</NavLink>
-            }
+          {/* Weight Reco */}
+          <li className="px-3 py-2 hover:bg-[#1e3a5f] rounded">
+            <NavLink
+              to="/Pages/Weight"
+              className="flex items-center gap-2 text-white no-underline"
+            >
+              <i className="bi bi-minecart-loaded text-2xl"></i>
+              {isOpen && <span>Weight Reco</span>}
+            </NavLink>
           </li>
 
-          <li className="flex items-center gap-2 px-3 py-2 hover:bg-[#1e3a5f] rounded">
-            <i className="bi bi-clipboard2-fill text-2xl"></i>
-            {isOpen && 
-            <NavLink to="/Pages/Report" className="nav-link text-white">Reports</NavLink>
-            }
+          {/* Billing */}
+          <li className="px-3 py-2 hover:bg-[#1e3a5f] rounded">
+            <NavLink
+              to="/Billing-subpages/Billing"
+              className="flex items-center gap-2 text-white no-underline"
+            >
+              <i className="bi bi-receipt text-2xl"></i>
+              {isOpen && <span>Billing</span>}
+            </NavLink>
           </li>
 
-          <li className="flex items-center gap-2 px-3 py-2 hover:bg-[#1e3a5f] rounded">
-            <i className="bi bi-cart-fill text-2xl"></i>
-            {isOpen && 
-            <NavLink to="/Pages/Abandoned" className="text-white nav-link">Abandoned</NavLink> }
+          {/* Reports */}
+          <li className="px-3 py-2 hover:bg-[#1e3a5f] rounded">
+            <NavLink
+              to="/Pages/Report"
+              className="flex items-center gap-2 text-white no-underline"
+            >
+              <i className="bi bi-clipboard2-fill text-2xl"></i>
+              {isOpen && <span>Reports</span>}
+            </NavLink>
           </li>
 
-          <li className="flex items-center gap-2 px-3 py-2 hover:bg-[#1e3a5f] rounded">
-            <i className="bi bi-file-earmark-excel-fill text-2xl"></i>
-            {isOpen && 
-            <NavLink to="/Pages/Addons" className="nav-link text-white">Addons</NavLink>
-            }
+          {/* Abandoned */}
+          <li className="px-3 py-2 hover:bg-[#1e3a5f] rounded">
+            <NavLink
+              to="/Pages/Abandoned"
+              className="flex items-center gap-2 text-white no-underline"
+            >
+              <i className="bi bi-cart-fill text-2xl"></i>
+              {isOpen && <span>Abandoned</span>}
+            </NavLink>
           </li>
 
-          <li className="flex items-center gap-2 px-3 py-2 hover:bg-[#1e3a5f] rounded">
-            <i className="bi bi-gear-fill text-2xl"></i>
-            {isOpen && 
-            <NavLink to="/Pages/Settings" className="nav-link text-white" >Settings</NavLink> }
+          {/* Addons */}
+          <li className="px-3 py-2 hover:bg-[#1e3a5f] rounded">
+            <NavLink
+              to="/Pages/Addons"
+              className="flex items-center gap-2 text-white no-underline"
+            >
+              <i className="bi bi-file-earmark-excel-fill text-2xl"></i>
+              {isOpen && <span>Addons</span>}
+            </NavLink>
           </li>
 
+          {/* Settings */}
+          <li className="px-3 py-2 hover:bg-[#1e3a5f] rounded">
+            <NavLink
+              to="/Pages/Settings"
+              className="flex items-center gap-2 text-white no-underline"
+            >
+              <i className="bi bi-gear-fill text-2xl"></i>
+              {isOpen && <span>Settings</span>}
+            </NavLink>
+          </li>
 
-          {/* this is dummy */}
-         <li
+          {/* Supports Dropdown */}
+          <li
             className="flex flex-col px-3 py-2 hover:bg-[#0a1e38] rounded cursor-pointer"
-            onClick={() => toggleDropdown(" Supports")}
+            onClick={() => toggleDropdown("supports")}
           >
             <div className="flex items-center gap-2">
-            <i className="bi bi-person-raised-hand text-2xl"></i>
+              <i className="bi bi-person-raised-hand text-2xl"></i>
               {isOpen && (
                 <span className="flex justify-between w-full">
                   Supports
                   <i
                     className={`bi bi-caret-${
-                      openDropdown === " Supports" ? "down" : "down"
+                      openDropdown === "supports" ? "down" : "down"
                     }-fill`}
                   ></i>
                 </span>
               )}
             </div>
 
-            {isOpen && openDropdown === " Supports" && (
-              <ul className="pl-8 mt-1 space-y-3   text-sm">
+            {isOpen && openDropdown === "supports" && (
+              <ul className="pl-8 mt-1 space-y-3 text-sm">
                 <li>
-                  <NavLink to="/order-subpages/b2c" className="block text-white no-underline">
-                   Shipxpress sops
+                  <NavLink to="/support/shipxpress-sops" className="block text-white no-underline">
+                    Shipxpress Sops
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/order-subpages/b2b" className="block text-white no-underline">
-                   Escalations
+                  <NavLink to="/support/escalations" className="block text-white no-underline">
+                    Escalations
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/order-subpages/b2c" className="block text-white no-underline">
-                   Shipxpress sops
+                  <NavLink to="/support/faq" className="block text-white no-underline">
+                    FAQ
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/order-subpages/b2c" className="block text-white no-underline">
-                   Shipxpress sops
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/order-subpages/b2c" className="block text-white no-underline">
-                   Shipxpress sops
+                  <NavLink to="/support/contact" className="block text-white no-underline">
+                    Contact
                   </NavLink>
                 </li>
               </ul>
             )}
           </li>
 
-          {/* servicable pincode */}
-
-          <li className="flex items-center gap-2 px-3 py-2 hover:bg-[#1e3a5f] rounded">
-            <i className="bi bi-bing text-2xl"></i>
-            {isOpen && 
-            <NavLink to="/Pages/Service" className="nav-link text-white">Serviceable Pincodes</NavLink>
-            }
+          {/* Serviceable Pincode */}
+          <li className="px-3 py-2 hover:bg-[#1e3a5f] rounded mb-5">
+            <NavLink
+              to="/Pages/Service"
+              className="flex items-center gap-2 text-white no-underline"
+            >
+              <i className="bi bi-bing text-2xl"></i>
+              {isOpen && <span>Serviceable Pincodes</span>}
+            </NavLink>
           </li>
         </ul>
       </div>
     </div>
-      
   );
 };
 
